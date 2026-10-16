@@ -584,9 +584,9 @@
             .moment-grid { grid-template-columns: 1fr; }
         }
         
-        /* ===== Corak geometris latar belakang ===== */
+        /* ===== Corak geometris latar belakang (hitam halus utk latar terang) ===== */
         :root {
-            --corak-geo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%2310b981' stroke-width='2' opacity='.08'%3E%3Ccircle cx='24' cy='26' r='9'/%3E%3Cpath d='M118 12l12 20h-24z'/%3E%3Cpath d='M52 70h16M60 62v16'/%3E%3Crect x='104' y='92' width='16' height='16' rx='2' transform='rotate(18 112 100)'/%3E%3C/g%3E%3Cg fill='%2310b981' opacity='.06'%3E%3Ccircle cx='84' cy='34' r='5'/%3E%3Cpath d='M20 108l10 17H10z'/%3E%3Crect x='138' y='46' width='12' height='12' rx='2' transform='rotate(-12 144 52)'/%3E%3Ccircle cx='60' cy='140' r='7'/%3E%3Cpath d='M104 132l9 15h-18z'/%3E%3C/g%3E%3Cg fill='none' stroke='%23059669' stroke-width='2' opacity='.07'%3E%3Cpath d='M96 66h14M103 59v14'/%3E%3Ccircle cx='148' cy='146' r='8'/%3E%3C/g%3E%3C/svg%3E");
+            --corak-geo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23000000' stroke-width='2' opacity='.13'%3E%3Ccircle cx='24' cy='26' r='9'/%3E%3Cpath d='M118 12l12 20h-24z'/%3E%3Cpath d='M52 70h16M60 62v16'/%3E%3Crect x='104' y='92' width='16' height='16' rx='2' transform='rotate(18 112 100)'/%3E%3C/g%3E%3Cg fill='%23000000' opacity='.10'%3E%3Ccircle cx='84' cy='34' r='5'/%3E%3Cpath d='M20 108l10 17H10z'/%3E%3Crect x='138' y='46' width='12' height='12' rx='2' transform='rotate(-12 144 52)'/%3E%3Ccircle cx='60' cy='140' r='7'/%3E%3Cpath d='M104 132l9 15h-18z'/%3E%3C/g%3E%3Cg fill='none' stroke='%23000000' stroke-width='2' opacity='.12'%3E%3Cpath d='M96 66h14M103 59v14'/%3E%3Ccircle cx='148' cy='146' r='8'/%3E%3C/g%3E%3C/svg%3E");
             --corak-geo-putih: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='white' stroke-width='2' opacity='.05'%3E%3Ccircle cx='24' cy='26' r='9'/%3E%3Cpath d='M118 12l12 20h-24z'/%3E%3Cpath d='M52 70h16M60 62v16'/%3E%3Crect x='104' y='92' width='16' height='16' rx='2' transform='rotate(18 112 100)'/%3E%3C/g%3E%3Cg fill='white' opacity='.04'%3E%3Ccircle cx='84' cy='34' r='5'/%3E%3Cpath d='M20 108l10 17H10z'/%3E%3Crect x='138' y='46' width='12' height='12' rx='2' transform='rotate(-12 144 52)'/%3E%3Ccircle cx='60' cy='140' r='7'/%3E%3Cpath d='M104 132l9 15h-18z'/%3E%3C/g%3E%3C/svg%3E");
         }
         
@@ -1242,7 +1242,7 @@
                 <h2 class="text-4xl font-bold text-gray-800 mb-4">Moment of KKN</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Dokumentasi kebersamaan dan kegiatan anggota KKN 2025 di Kelurahan Watumotobe</p>
             </div>
-            <div class="moment-grid fade-in">
+            <div class="moment-grid">
                 <div class="moment-photo">
                     <img src="https://z-cdn-media.chatglm.cn/files/b1e6ac47-1bc9-4e7d-8376-3ae1cf7e7286.jpeg?auth_key=1892178377-f82b7e13fabe42e98d6bd5f00fdf87f9-0-5b23eff7bfdb546f350a90b517d8eed6" alt="Dokumentasi KKN 2025">
                     <div class="zoom-indicator"><i class="fas fa-search-plus"></i></div>
@@ -1983,7 +1983,7 @@
 
         // Intersection Observer for fade-in animations
         const observerOptions = {
-            threshold: 0.1,
+            threshold: 0,
             rootMargin: "0px 0px -50px 0px"
         };
 
@@ -2013,4 +2013,4 @@
         });
     </script>
 </body>
-</html>
+</html
