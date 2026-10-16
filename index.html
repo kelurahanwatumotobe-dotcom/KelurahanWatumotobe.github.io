@@ -447,6 +447,95 @@
             opacity: 1;
         }
         
+        /* KKN Member Card Styles */
+        .section-gradient-kkn {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+        }
+        
+        .kkn-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .kkn-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid rgba(16, 185, 129, 0.12);
+            transition: all 0.3s ease;
+        }
+        
+        .kkn-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+        }
+        
+        .kkn-avatar-wrap {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1rem;
+            border: 4px solid #10b981;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .kkn-avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 85%;
+            transform-origin: center 30%;
+            transition: transform 0.4s ease;
+            filter: contrast(1.05) saturate(1.07);
+        }
+        
+        .kkn-card:hover .kkn-avatar {
+            transform: scale(1.08);
+        }
+        
+        .kkn-card:hover .kkn-avatar-wrap {
+            box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.25);
+        }
+        
+        .kkn-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.35rem;
+        }
+        
+        .kkn-prodi {
+            font-size: 0.8rem;
+            color: #059669;
+            font-weight: 500;
+            line-height: 1.4;
+            background: rgba(16, 185, 129, 0.08);
+            display: inline-block;
+            padding: 0.25rem 0.85rem;
+            border-radius: 9999px;
+        }
+        
+        @media (max-width: 992px) {
+            .kkn-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .kkn-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 480px) {
+            .kkn-grid { gap: 1rem; }
+            .kkn-avatar-wrap { width: 110px; height: 110px; }
+            .kkn-card { padding: 1.25rem 0.75rem; }
+            .kkn-name { font-size: 0.95rem; }
+            .kkn-prodi { font-size: 0.7rem; }
+        }
+        
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .hero-bg {
@@ -822,6 +911,7 @@
                     <a href="#kegiatan" class="text-gray-700 hover:text-green-600 transition">Kegiatan</a>
                     <a href="#potensi" class="text-gray-700 hover:text-green-600 transition">Potensi</a>
                     <a href="#galeri" class="text-gray-700 hover:text-green-600 transition">Galeri</a>
+                    <a href="#kkn" class="text-gray-700 hover:text-green-600 transition">Anggota KKN</a>
                     <a href="#peta" class="text-gray-700 hover:text-green-600 transition">Peta</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden">
@@ -838,6 +928,7 @@
                 <a href="#kegiatan" class="block py-2 text-gray-700 hover:text-green-600">Kegiatan</a>
                 <a href="#potensi" class="block py-2 text-gray-700 hover:text-green-600">Potensi</a>
                 <a href="#galeri" class="block py-2 text-gray-700 hover:text-green-600">Galeri</a>
+                <a href="#kkn" class="block py-2 text-gray-700 hover:text-green-600">Anggota KKN</a>
                 <a href="#peta" class="block py-2 text-gray-700 hover:text-green-600">Peta</a>
             </div>
         </div>
@@ -971,6 +1062,102 @@
         </div>
     </section>
 
+    <!-- Anggota KKN Section -->
+    <section id="kkn" class="py-20 section-gradient-kkn">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Anggota KKN 2025</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Tim Kuliah Kerja Nyata (KKN) yang ditugaskan di Kelurahan Watumotobe</p>
+            </div>
+            <div class="kkn-grid">
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/886973d8-e674-490f-a2cf-37c5feeff486.jpg?auth_key=1892168760-97e9cf78ea80440ea678cb1740ea8797-0-fa28eff56a3e31277eed0f87cf2008af" alt="Foto Abel Safitri" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Abel Safitri</h3>
+                    <p class="kkn-prodi">PGSD</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/2959a397-8ab3-47da-a987-a1aa748f0218.jpg?auth_key=1892168760-5c7c6ae97b8a4f90861c076445ed588e-0-f0cd02588b9acf8baf58f5d0b7b32a3a" alt="Foto Agus Muslim M" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Agus Muslim M</h3>
+                    <p class="kkn-prodi">Akuntansi</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/ef31c4b1-f82b-4ccb-9cf8-3078822203ff.jpg?auth_key=1892168760-37c09ecaff1a409295b0c6db6b3bee2c-0-1df7303341c553f810c06b6f34dad3bf" alt="Foto Ayu Ramadhani Hidayat" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Ayu Ramadhani Hidayat</h3>
+                    <p class="kkn-prodi">PG. PAUD</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/c3856285-d911-4fd6-b26d-2dda9be59f1e.jpg?auth_key=1892168760-6bfab9b835844e34a290df3244855bc8-0-14a26a238cb62171cd6df36270e16a51" alt="Foto Bintang Mahaputra" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Bintang Mahaputra</h3>
+                    <p class="kkn-prodi">Teknik Sipil</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/03c9e757-d9ce-467a-b7dd-002b03648e82.jpg?auth_key=1892168760-3f06b4df537948aa8292f2bb78abaa82-0-588fef338482ae25aeb1a04692a80651" alt="Foto Cahaya Muqaddimah" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Cahaya Muqaddimah</h3>
+                    <p class="kkn-prodi">PGSD</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/2c219644-2d49-42e2-bfcb-bdbb7450211c.jpg?auth_key=1892168760-7037e1b5da944e0bb9e37dc59b127e78-0-0b9d2a3412b86d90f62783c2f70fd791" alt="Foto Chici" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Chici</h3>
+                    <p class="kkn-prodi">PGSD</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/430e8092-2b91-4626-846c-1e708da13287.jpg?auth_key=1892168760-9bfc26752ade4fc8b3ce3f27da58c05b-0-483c29d19b0f92ec7eb87678f301d608" alt="Foto Muh Harun Ar Rasyid" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Muh Harun Ar Rasyid</h3>
+                    <p class="kkn-prodi">Rekayasa Sistem Komputer</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/f12f78f0-a5b8-4b31-9275-8903e739f1d2.png?auth_key=1892168760-b2f05f5fce0141fb94402223e4da6a81-0-f45418db055fd5f859640d888af04775" alt="Foto Sitti Nur Hasana" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Sitti Nur Hasana</h3>
+                    <p class="kkn-prodi">Pendidikan Agama Islam</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/71b198c0-b03e-4e18-b3e6-4b2fac8250a4.jpg?auth_key=1892172525-e5c0c0271f014209bc30f1bf556715f6-0-941b9f96e2b31692e538e7f30c9b9a14" alt="Foto Rani Juliani" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Rani Juliani</h3>
+                    <p class="kkn-prodi">Akuntansi</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/cd2f27de-1a9f-420e-8be8-4fb5ea6fdb01.jpg?auth_key=1892172525-ce772dbeb69e4766acbe6eb88a8fea2c-0-f440f82b5b8e1e03abcb3d49dbce6620" alt="Foto Safar Darmansyah" class="kkn-avatar" style="object-position: center 72%;">
+                    </div>
+                    <h3 class="kkn-name">Safar Darmansyah</h3>
+                    <p class="kkn-prodi">PGSD</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/eb6b4e99-c338-469c-bf71-9311d061085b.jpg?auth_key=1892172525-0b3f47cbd32340ec92cc1e983852d209-0-3d006d4fbd84b0ceeb1ce1cdb1ddec8e" alt="Foto Verniyati" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Verniyati</h3>
+                    <p class="kkn-prodi">Ahwal Syakhsiyah</p>
+                </div>
+                <div class="kkn-card fade-in">
+                    <div class="kkn-avatar-wrap">
+                        <img src="https://z-cdn-media.chatglm.cn/files/c6dd9251-5408-4fef-a390-2f0d8c85c3b9.jpg?auth_key=1892172525-4430b152cd8b450eb2bfd5c3c170057b-0-e58dc6e97a13d903e9e05cbc7ac95aa3" alt="Foto Wardatul Adawia Hasana" class="kkn-avatar">
+                    </div>
+                    <h3 class="kkn-name">Wardatul Adawia Hasana</h3>
+                    <p class="kkn-prodi">Manajemen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Map Section -->
     <section id="peta" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
@@ -1073,6 +1260,7 @@
                         <li><a href="#kegiatan" class="hover:text-white transition">Kegiatan</a></li>
                         <li><a href="#potensi" class="hover:text-white transition">Potensi</a></li>
                         <li><a href="#galeri" class="hover:text-white transition">Galeri</a></li>
+                        <li><a href="#kkn" class="hover:text-white transition">Anggota KKN</a></li>
                         <li><a href="#peta" class="hover:text-white transition">Peta</a></li>
                     </ul>
                 </div>
